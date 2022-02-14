@@ -12,10 +12,10 @@ This documentation is incomplete and will be updated as the project progresses.
   - [x] Search photos 
   - [x] Get photo from ID
   - [x] Curated photos
-- [ ] Videos
-  - [ ] Search videos
-  - [ ] Get video from ID
-  - [ ] Popular videos
+- [x] Videos
+  - [x] Search videos
+  - [x] Get video from ID
+  - [x] Popular videos
 - [ ] Collections
   - [ ] User collections
   - [ ] Featured collections
