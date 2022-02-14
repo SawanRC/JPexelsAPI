@@ -59,8 +59,4 @@ public class PexelsPhotoDownloader extends PexelsDownloader<PhotosEndpointRespon
 	public PhotosEndpointResponse.Photo downloadPhotoFromId(long id) throws IOException {
 		return downloadFromId(id, GET_PHOTO_ENDPOINT, PhotosEndpointResponse.Photo.class);
 	}
-	
-	public static void main(String[] args) {
-		PexelsPhotoDownloader p = new PexelsPhotoDownloader("", 3, 5);
-	}
 }
