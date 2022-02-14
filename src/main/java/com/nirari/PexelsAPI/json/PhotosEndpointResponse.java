@@ -47,14 +47,12 @@ public class PhotosEndpointResponse {
 		@SerializedName("url")
 		public final String url;
 		
-		@SerializedName("photographer")
-		public final String photographer;
-		
-		@SerializedName("photographer_url")
-		public final String photographerUrl;
-		
-		@SerializedName("photographer_id")
-		public final int photographerId;
+		/**
+		 * Note: This field is a combination of three items from the API's JSON response, and
+		 * a custom deserializer ({@link PhotoResponseDeserializer}) is used to consolidate them into a single field.
+		 */
+		@SerializedName("user")
+		public final PexelsUser pexelsUser;
 		
 		@SerializedName("avg_color")
 		public final String averageColor;
@@ -66,16 +64,13 @@ public class PhotosEndpointResponse {
 		public final boolean liked;
 		
 		private Photo(int id, int width, int height,
-		             String url, String photographer, String photographerUrl,
-		             int photographerId, String averageColor, HashMap<String, String> src, boolean liked) {
+		              String url, PexelsUser pexelsUser, String averageColor, HashMap<String, String> src, boolean liked) {
 			
 			this.id = id;
 			this.width = width;
 			this.height = height;
 			this.url = url;
-			this.photographer = photographer;
-			this.photographerUrl = photographerUrl;
-			this.photographerId = photographerId;
+			this.pexelsUser = pexelsUser;
 			this.averageColor = averageColor;
 			this.src = src;
 			this.liked = liked;
